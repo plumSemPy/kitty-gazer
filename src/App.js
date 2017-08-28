@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Username, Password } from './Components/Form'
 import './App.css';
 
 class App extends Component {
@@ -9,11 +10,11 @@ class App extends Component {
         <div>
           <form>
             usename:
-            <input type="text" name="usename"/>
+            <Username />
             password:
-            <input type="password" name="password"/>
+            <Password />
           </form>
-          <button onClick={submit()}>Sign up/Login</button>
+          <button>Sign up/Login</button>
         </div>
       </div>
     );
