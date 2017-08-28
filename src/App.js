@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Username, Password } from './Components/Form'
+import Button from './Components/Button'
 import './App.css';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
             password:
             <Password />
           </form>
-          <button>Sign up/Login</button>
+          <Button />
         </div>
       </div>
     );
