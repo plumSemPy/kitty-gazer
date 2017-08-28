@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 
-class Username extends Component{
-	constructor(props){
-		super(props);
-		this.state = { value: null }
-	}
-    render(){
+const Username = (props, handler) => {
    	  return <input 
-       value={this.state.value}
+       value={props.username}
    	   type='text' 
    	   onChange={
-   	  	event => this.setState({ value: event.target.value })
+   	  	event => this.handler(event, { username: event.target.value })
    	  }/>  
-   } 
-
 }
 
 class Password extends Component{

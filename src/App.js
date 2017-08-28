@@ -4,6 +4,14 @@ import Button from './Components/Button'
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = { username: null, password: null }
+    this.handler = (event, state) => {
+      event.preventDefault();
+      this.setState(state)
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -11,11 +19,16 @@ class App extends Component {
         <div>
           <form>
             usename:
-            <Username />
+            <Username handler={this.handler}/>
             password:
-            <Password />
+            <Password props={this.state}/>
           </form>
-          <Button />
+          <Button creds={
+            { 
+              username: this.state.username, 
+              password: this.state.password 
+            }
+          }/>
         </div>
       </div>
     );
