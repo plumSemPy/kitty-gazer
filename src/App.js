@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
     this.state = { username: null, password: null }
     this.handler = (event, state) => {
-      event.preventDefault();
+      event.preventDefault()
       this.setState(state)
     }
   }
@@ -19,7 +19,11 @@ class App extends Component {
         <div>
           <form>
             usename:
-            <Username handler={this.handler}/>
+            <Username props={
+              { handler: this.handler.bind(this),
+                username: this.state.username
+              }
+            }/>
             password:
             <Password props={this.state}/>
           </form>
