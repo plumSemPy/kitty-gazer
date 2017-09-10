@@ -3,8 +3,6 @@ require('babel-register');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const App = require('./App')
-
 const app = express();
 const router = express.Router();
 
