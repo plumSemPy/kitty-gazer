@@ -11,11 +11,12 @@ class Button extends Component{
    	 }
    }
    submit(){
-   	console.log(this)
-     axios.post(
-     	'http://localhost:3333/api/',
-     	this.state
-     	).then((res, rej)=> console.log(res))
+     // axios.post(
+     // 	'http://localhost:3333/api/',
+     // 	this.state
+     // 	).then((res, rej)=> console.log(res))
+     console.log(this.state)
+     console.log(this.props)
    }
    render(){
    	  return <button onClick={this.submit}> Sign Up/Login </button>  

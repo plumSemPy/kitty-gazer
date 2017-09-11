@@ -6,10 +6,11 @@ import './App.css';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = { username: null, password: null }
+    this.state = { username: '', password: '' }
     this.handler = (event) => {
       const { name, value } = event.target;
       this.setState({ [name]: value})
+
     }
   }
   render() {
@@ -30,10 +31,7 @@ class App extends Component {
             />
           </form>
           <Button creds={
-            { 
-              username: this.state.username, 
-              password: this.state.password 
-            }
+            this.state
           }/>
         </div>
       </div>

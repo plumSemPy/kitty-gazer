@@ -4,7 +4,8 @@ const Username = (props) => {
 	return <input 
 	    value={ props.username }
 	    type='text' 
-	    onChange={ props.handler}
+	    name='username'
+	    onChange={ props.handler }
 	 />
 }
 
@@ -12,6 +13,7 @@ const Password = (props) => {
 	return <input
 	    value={ props.password}
 	    type='password'
+	    name='password'
 	    onChange={ props.handler } 
 	    />
 }
